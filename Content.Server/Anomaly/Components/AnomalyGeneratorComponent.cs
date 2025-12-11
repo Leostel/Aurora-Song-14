@@ -39,13 +39,13 @@ public sealed partial class AnomalyGeneratorComponent : Component
     /// The material needed to generate an anomaly
     /// </summary>
     [DataField("requiredMaterial", customTypeSerializer: typeof(PrototypeIdSerializer<MaterialPrototype>)), ViewVariables(VVAccess.ReadWrite)]
-    public string RequiredMaterial = "Bananium"; // Aurora - Plasma<Bannanium
+    public string RequiredMaterial = "Anomalite"; // Frontier - Plasma<Anomalite
 
     /// <summary>
     /// The amount of material needed to generate a single anomaly
     /// </summary>
     [DataField("materialPerAnomaly"), ViewVariables(VVAccess.ReadWrite)]
-    public int MaterialPerAnomaly = 1000;  //Aurora: 1500->1000
+    public int MaterialPerAnomaly = 300; // Frontier - 1500<300
 
     /// <summary>
     /// The random anomaly spawner entity
@@ -76,12 +76,12 @@ public sealed partial class AnomalyGeneratorComponent : Component
     /// The material needed to generate an anomaly
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public ProtoId<StackPrototype> RefundStackType = "Bananium";
+    public ProtoId<StackPrototype> RefundStackType = "Anomalite";
 
     /// <summary>
     /// Stack count to return on refund
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public int RefundAmount = 10;
+    public int RefundAmount = 3;
     // End Frontier
 }
